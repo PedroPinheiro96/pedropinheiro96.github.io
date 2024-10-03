@@ -9,7 +9,7 @@ image:
 
 In today's digital landscape, online ads can be more than just an annoyance; they can slow down your browsing experience and invade your privacy. Enter Pi-hole, a powerful network-wide ad blocker that transforms your home network into a cleaner, faster space. By acting as a DNS sinkhole, Pi-hole intercepts and blocks unwanted content before it reaches your devices.
 
-In this post, we'll guide you through the straightforward process of installing and configuring Pi-hole. Whether you're a tech novice or a seasoned pro, this step-by-step tutorial will help you reclaim your online experience and enjoy a more streamlined internet. Let’s dive in!
+In this post, I will guide you through the straightforward process of installing and configuring Pi-hole. Whether you're a tech novice or a seasoned pro, this step-by-step tutorial will help you reclaim your online experience and enjoy a more streamlined internet. Let’s dive in!
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ First, download the Raspberry Pi Imager from the official [Raspberry Pi website]
 
 1. Connect to the Raspberry PI via SSH.
 
-2. Create the a group for SSH users:
+2. Create a group for SSH users:
 ``` bash
 sudo groupadd ssh-users
 ```
