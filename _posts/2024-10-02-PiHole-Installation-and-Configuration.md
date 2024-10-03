@@ -137,7 +137,7 @@ Pi-Hole is now installed!
 pihole -a -p
 ```
 
-12. To access the admin page, go to <http://RaspberrypiIP/admin>.
+12. To access the admin page, go to `http://RaspberrypiIP/admin`.
 ![PIInstallation](assets/images/PiHole-Configuration-Installation/PiHomepage.png)<br><br>
 
 ## Step 5: Set the Raspberry PI as the Router's DNS Server.
