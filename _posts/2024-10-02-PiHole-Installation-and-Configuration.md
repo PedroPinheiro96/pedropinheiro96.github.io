@@ -1,7 +1,7 @@
 ---
 title: "Pi-Hole Installation and Configuration"
 date: 2024-10-02 00:00:00 +0100
-categories: [RaspberryPi]
+categories: [RaspberryPi, Pi-Hole]
 tags: [Ad Blocker, Raspberry Pi, Network, Pi-Hole]
 image: 
   path: /assets/images/PiHole-Configuration-Installation/header.png
