@@ -45,10 +45,6 @@ The following message was displayed to let us know the command was successful:
 
 ## Level 0 -> 1
 
-### Login
-
->SSH: `ssh -p 2220 bandit1@bandit.labs.overthewire.org`<br>Password: `example`
-
 ### Level Goal
 
 >The password for the next level is stored in a file called `readme` located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
@@ -147,7 +143,7 @@ cat "spaces in this filename"
 
 ### Login
 
->SSH: `ssh -p 2220 bandit3@bandit.labs.overthewire.org`<br>Password: `MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx`.
+>SSH: `ssh -p 2220 bandit3@bandit.labs.overthewire.org`<br>Password: `MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx`
 
 ### Level Goal
 
