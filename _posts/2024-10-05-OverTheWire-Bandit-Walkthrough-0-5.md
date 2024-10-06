@@ -129,7 +129,7 @@ This reveals the password for the next level: `263JGJPfgU6LtdEvgfWU1XP5yac29mFx`
 ### Solution 
 
 To read the content of a file with spaces in its name, escape every space or wrap the filename in quotes:
-><https://linuxhandbook.com/filename-spaces-linux/>
+>Reading material: <https://linuxhandbook.com/filename-spaces-linux/>
 
 
 ```bash
