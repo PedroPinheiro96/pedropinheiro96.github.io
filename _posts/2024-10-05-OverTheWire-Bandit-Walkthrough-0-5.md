@@ -54,7 +54,7 @@ The following message was displayed to let us know the command was successful:
 
 ### Solution 
 
-You can see you're already at the home directory by observing at the `~` in the prompt.
+You can see you're already at the home directory by observing the `~` in the prompt.
 
 To read the contents of the `readme` file, use the `cat` command.
 
