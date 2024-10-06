@@ -1,6 +1,6 @@
 ---
 title: "OverTheWire: Bandit Levels 0-5"
-date: 2024-10-02 00:00:00 +0100
+date: 2024-10-06 23:14:00 +0100
 categories: [OverTheWire, Bandit]
 tags: [ctf, linux, overthewire, bandit]
 image: 
