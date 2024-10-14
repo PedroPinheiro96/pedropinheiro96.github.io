@@ -208,7 +208,7 @@ We will need eight splunk servers:
 
 To speed up the process of creating virtual machines, clone SH1 for each additional Splunk server.
 
-1. Right-click on the `SearchHead1` VM and select `Clone`.
+1. Right-click on the `SearchHead1` VM and select `Clone`.<br>
 ![SplunkServer-Clone](assets/images/VirtualBox-Splunk-Installation-Configuration-Part1/SplunkServer-Clone.png)
 
 2. Name it `Indexer1`, choose the directory, and select `Generate new MAC addresses for all network adapters`.<br>
