@@ -1,7 +1,7 @@
 ---
 title: "Distributed Splunk Environment Lab: Part 1 - VirtualBox/Splunk Installation and Configuration"
 date: 2024-10-14 19:45:00 +0100
-categories: [Splunk, Lab]
+categories: [Splunk, DistributedEnvironmentLab]
 tags: [splunk, linux, lab, virtualbox]
 image:  
   path: assets/images/VirtualBox-Splunk-Installation-Configuration-Part1/SplunkHeader.png
