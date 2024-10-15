@@ -191,7 +191,7 @@ The administration machine is where we will primarily work and use to SSH Into e
 7. You can set your username and password here.
 ![MainMachine-CreateAccount](assets/images/VirtualBox-Splunk-Installation-Configuration-Part1/MainMachine-CreateAccount.png)
 
-### Clone and Configure Splunk Servers :
+### Clone and Configure Splunk Servers
 
 We will need eight splunk servers:
 
@@ -572,7 +572,7 @@ sudo ufw status verbose
 1. Open your browser and go to `http:"server IP":8000` to access each server's Splunk webpage. If any of them fails to connect, check each step again for misconfigurations.
 ![SplunkWebPage](assets/images/VirtualBox-Splunk-Installation-Configuration-Part1/SplunkWebPage.png)
 
-## Extra Configuration
+## Disable Hyper-V Hypervisor, Device Guard, and Credential Guard
 
 If you see the green turtle icon when you boot a VM, follow the steps in [this guide](https://learn.microsoft.com/en-us/troubleshoot/windows-client/application-management/virtualization-apps-not-work-with-hyper-v).
 
