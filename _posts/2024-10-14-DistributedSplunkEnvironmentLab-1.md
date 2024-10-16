@@ -13,6 +13,8 @@ In this tutorial, we will walk through the process of setting up a Splunk enviro
 
 ## Pre Requisites
 
+Splunk account. Create one [here](https://www.splunk.com/en_us/sign-up.html?redirecturl=https://www.splunk.com/).
+
 A license is needed to configure a distributed Splunk environment.
 
 Request a Splunk developer [license here](https://dev.splunk.com/enterprise/dev_license/).
@@ -479,9 +481,9 @@ Group your VMs in VirtualBox for better organization.
 
 2. Name it `Indexers`.
 
-3. Group search heads as Search Heads and the cluster manager and deployment server as Managers.
+3. Group search heads as `Search Heads` and the cluster manager and deployment server as Managers.
 
-4. Move the forwarder into the Forwarder group.
+4. Move the forwarders into the `Forwarders` group.
 
 5. Lastly, select the 3 groups and group them as `Distributed Splunk Environment`.
 
@@ -493,7 +495,7 @@ Your VirtualBox homepage should look like this:
 
 Now that SSH is configured on all the servers, we can use the terminal in our administration Machine to install and configure Splunk.
 
-1. SSH into each machine.
+1. SSH into each machine apart from the `UF` VM.
 
 2. Download [Splunk](https://www.splunk.com/en_us/download/splunk-enterprise.html):
 ```bash
@@ -538,6 +540,67 @@ sudo /opt/splunk/bin/splunk enable boot-start -user splunk
 /opt/splunk/bin/splunk set servername <<server>>
 ```
 ![SplunkServerName](assets/images/VirtualBox-Splunk-Installation-Configuration-Part1/SplunkServerName.png)
+
+### Installing Splunk Universal Forwarder
+
+To install a Splunk Universal Forwarder, follow these steps.
+
+1. SSH into the `Universal Forwarder (UF)` VM.
+
+2. Create the `splunkfwd` user and group, and add the user to the `splunkfwd` and `ssh-users` groups.
+```bash
+sudo useradd -m splunkfwd
+sudo groupadd splunkfwd
+sudo usermod -a -G splunkfwd splunkfwd
+sudo usermod -a -G ssh-users splunkfwd
+``` 
+
+3. Set a password for the `splunkfwd` user.
+```bash
+sudo passwd splunkfwd
+```
+
+4. Copy the `authorized_keys` file to the `.ssh` directory of the `splunkfwd` user.
+```bash
+cp ~/.ssh/authorized_keys ~splunkfwd/.ssh/
+```
+
+5. Download the Splunk Universal Forwarder.
+```bash
+wget -O splunkforwarder-9.3.1-0b8d769cb912-Linux-x86_64.tgz "https://download.splunk.com/products/universalforwarder/releases/9.3.1/linux/splunkforwarder-9.3.1-0b8d769cb912-Linux-x86_64.tgz"
+```
+
+6. Extract the Splunk package.
+```bash
+ssudo tar -xvzf splunkforwarder-9.3.1-0b8d769cb912-Linux-x86_64.tgz -C /opt/
+```
+
+7. Change the ownership of the Splunk home directory.
+```bash
+sudo chown -R splunkfwd:splunkfwd /opt/splunkforwarder
+```
+
+8. Switch to the `splunkfwd` user or SSH from the administration machine.
+```bash
+sudo su splunkfwd
+ssh splunkfwd@10.0.5.208
+```
+
+8. Start Splunk.
+```bash
+/opt/splunkforwarder/bin/splunk start --accept-license
+```
+
+9. Create the admin credentials.
+```bash
+user: admin
+pass: splunkLab
+```
+
+The Splunk Universal Forwarder is now installed.
+
+![UniversalForwarderInstalled](assets/images/VirtualBox-Splunk-Installation-Configuration-Part1/UniversalForwarderInstalled.png)
+
 
 ### Firewall Installation and Configuration
 
@@ -589,6 +652,7 @@ In this post, we have:
 - Configured SSH and public key authentication.
 - Configured firewall rules.
 - Downloaded and Installed Splunk.
+- Downloaded and Insalled the Splunk Universal Forwarder.
 - Installed Guest Additions on the administration Machine.
 - Set the server name of each Splunk server.
 
