@@ -652,7 +652,7 @@ In this post, we have:
 - Configured SSH and public key authentication.
 - Configured firewall rules.
 - Downloaded and Installed Splunk.
-- Downloaded and Insalled the Splunk Universal Forwarder.
+- Downloaded and Installed the Splunk Universal Forwarder.
 - Installed Guest Additions on the administration Machine.
 - Set the server name of each Splunk server.
 
