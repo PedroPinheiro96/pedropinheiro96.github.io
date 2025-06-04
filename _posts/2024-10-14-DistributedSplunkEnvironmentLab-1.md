@@ -572,7 +572,7 @@ wget -O splunkforwarder-9.3.1-0b8d769cb912-Linux-x86_64.tgz "https://download.sp
 
 6. Extract the Splunk package.
 ```bash
-ssudo tar -xvzf splunkforwarder-9.3.1-0b8d769cb912-Linux-x86_64.tgz -C /opt/
+sudo tar -xvzf splunkforwarder-9.3.1-0b8d769cb912-Linux-x86_64.tgz -C /opt/
 ```
 
 7. Change the ownership of the Splunk home directory.
