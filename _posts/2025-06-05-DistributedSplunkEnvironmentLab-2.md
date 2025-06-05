@@ -1,6 +1,6 @@
 ---
 title: "Distributed Splunk Environment Lab: Part 2 - Create a Splunk Distributed Environment"
-date: 2025-05-05 00:00:00 +0100
+date: 2025-05-05 21:41:00 +0100
 categories: [Splunk, Lab]
 tags: [splunk, linux, lab, virtualbox]
 image: 
