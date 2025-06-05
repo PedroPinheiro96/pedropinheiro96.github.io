@@ -609,13 +609,14 @@ The Splunk Universal Forwarder is now installed.
 sudo apt install ufw
 ```
 
-2. Add the following rules:
+2. Open the following [ports](https://help.splunk.com/en/splunk-enterprise/administer/inherit-a-splunk-deployment/9.3/inherited-deployment-tasks/components-and-their-relationship-with-the-network):
 ```bash
 sudo ufw allow 8000 # Splunk webpage
 sudo ufw allow 9997 # Listening port
 sudo ufw allow 8089 # Used by Splunkd to communicate with other Splunk instances.
 sudo ufw allow 8191 # KVStore
 sudo ufw allow 8080 # Indexer Replication
+sudo ufw allow 9887 # Indexer Replication
 sudo ufw allow 22 # SSH
 ```
 
