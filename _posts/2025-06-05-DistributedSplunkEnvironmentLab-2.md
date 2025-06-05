@@ -329,7 +329,6 @@ As a reminder, the Heavy Forwarder is now querying the Cluster Manager for peer 
 To test this configuration, open the Search Head GUI and enter the following query:
 ```bash
 index=_internal sourcetype=splunkd host=hf
-| timechart count by host
 ```
 ![IndexerDiscovery-HeavyForwarderLogs.png](/assets/images/VirtualBox-Splunk-Installation-Configuration-Part2/IndexerDiscovery-HeavyForwarderLogs.png)
 
