@@ -87,7 +87,7 @@ On the Cluster Manager (cm) web interface, click `Settings`  `Indexer Clustering
 ![IndexerCluster-Peers.png](/assets/images/VirtualBox-Splunk-Installation-Configuration-Part2/IndexerCluster-Peers.png)
 
 2. Restart Splunk on each indexer.
-On the Cluster Manager GUI, click `Settings` > `Indexer Clustering`. Select the `Indexes` tab.<br>As the page shows, the indexers have been configured as peer nodes.
+On the Cluster Manager web interface, click `Settings` > `Indexer Clustering`. Select the `Indexes` tab.<br>As the page shows, the indexers have been configured as peer nodes.
 ![IndexerCluster-PeersGUI](/assets/images/VirtualBox-Splunk-Installation-Configuration-Part2/IndexerCluster-PeersGUI.png)
 
 ### Search Head
@@ -216,7 +216,7 @@ To confirm if the Splunk servers are using the Deployment Server as the license 
 ```
 ![SplunkLicense-ConfiguredCLI](/assets/images/VirtualBox-Splunk-Installation-Configuration-Part2/SplunkLicense-ConfiguredCLI.png)
 
-Indexer GUI:<br>
+Search Head web interface:<br>
 ![SplunkLicense-Configured](/assets/images/VirtualBox-Splunk-Installation-Configuration-Part2/SplunkLicense-Configured.png)
 
 ## Outputs
