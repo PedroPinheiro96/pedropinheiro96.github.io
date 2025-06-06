@@ -429,7 +429,7 @@ The Monitoring Console allows for centralized monitoring of the Splunk environme
 
 The Monitoring Console is now configured.
 
- You can check the following dashboards to confirm that it’s working for all the servers:
+You can check the following dashboards to confirm that it’s working for all the servers:
  
 Forwarders > Forwarders:Deployment
 ![MonitoringConsole-Forwarders.png](/assets/images/VirtualBox-Splunk-Installation-Configuration-Part2/MonitoringConsole-Forwarders.png)
@@ -446,8 +446,6 @@ Resource Usage > Resource Usage: Deployment
 ## Best Practice
 
 ### Enable HTTPS
-
- You can check the following dashboards to confirm that it’s working for all the servers:
 
 1. SSH into the Deployment Server.
 
