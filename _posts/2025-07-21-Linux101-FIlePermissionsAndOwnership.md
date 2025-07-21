@@ -28,6 +28,8 @@ The initial string of the `file.txt` line breaks down as:
 - `Jul 21 20:15` : Last modified date
 - `file.txt` : File name
 
+---
+
 ### Understanding File Permissions
 
 Each permission is represented by a letter:
@@ -37,7 +39,6 @@ Each permission is represented by a letter:
 - `x` (Execute):  
   - For **files**: Allows execution of the file (e.g. running scripts or programs)  
   - For **directories**: Allows entering the directory (`cd`) and accessing files inside (with proper read permissions)
-
 
 So in this example:
 
@@ -60,6 +61,8 @@ Use `ls -l` to see who owns what:
 
 In this example, the file is owned by the user `pedro` and the group `pedro`.
 
+---
+
 ### Changing Ownership
 
 You can change the ownership of a file or directory using the chown (change owner) command.
@@ -79,6 +82,8 @@ sudo chown -R newuser:newgroup directory/
 ```
 
 The `-R` (recursive) flag makes chown apply to all files and subdirectories inside the specified directory. This is especially useful when setting up new user environments, web servers, or shared project folders.
+
+---
 
 ## Changing Permissions with chmod
 
@@ -111,6 +116,7 @@ chmod o=r script.sh   # Set others' permission to read only (removes all others 
 
 ![chmod-symbolic](/assets/images/Linux101/FilePermissionsAndOwnership/chmod-symbolic.png)
 
+---
 
 ### Numeric Mode
 

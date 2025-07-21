@@ -30,11 +30,15 @@ So when you see `pedro@ubuntu:~$`, it's telling you:
 
 You're logged in as `pedro` on a machine named `ubuntu`, you're in your `home` directory, and you're ready to type a command.
 
+---
+
 ## Where Am I? - whereami
 
 The very first thing you'll want to know is **where you are** in the file system. Use the `pwd` command to find your **Present Working Directory**:
 
 ![pwd](/assets/images/Linux101/NavigatingTheCommandLine/pwd.png)
+
+---
 
 ## Who Am I? - whoami
 
@@ -43,6 +47,8 @@ After knowing where you are in the filesystem, the next useful thing to know is 
 ![whoami](/assets/images/Linux101/NavigatingTheCommandLine/whoami.png)
 
 This command returns the current user that is logged into the shell session. It's especially useful when working on multi-user systems or using elevated privileges like sudo.
+
+---
 
 ## Listing Files – ls
 
@@ -56,6 +62,8 @@ ls -lh         # Human-readable sizes
 ``` 
 
 ![ls](/assets/images/Linux101/NavigatingTheCommandLine/ls.png)
+
+---
 
 ## Moving Around – cd
 
@@ -78,9 +86,13 @@ Special symbols to remember:
 
 These shortcuts make navigation faster and more intuitive, especially when you're working deep within a folder structure.
 
+---
+
 ## Absolute vs Relative Paths
 
 When using linux commands, you can use either absolute paths or relative paths. Understanding the difference is key to efficient command-line navigation.
+
+---
 
 ### Absolute Path
 
@@ -91,6 +103,8 @@ cd /var/log
 ```
 
 This command takes you directly to the /var/log directory, regardless of your current location.
+
+---
 
 ### Relative Path
 
@@ -109,6 +123,7 @@ Here’s a quick comparison:
 | /home/pedro                | cd Documents    | /home/pedro/Documents (relative path)       |
 | /home/pedro/docs/tutorials | cd ../../images | /home/pedro/images (relative path using ..) |
 
+---
 
 ## Viewing File Contents – cat, less, head, and tail
 
@@ -116,17 +131,23 @@ Once you’ve found your way around the filesystem, you’ll often want to look 
 
 Here are the most commonly used tools to view file contents from the command line:
 
+---
+
 ### cat - Display the Entire File
 
 Use `cat` (short for concatenate) to quickly print the entire contents of a file to the terminal. Great for small files, but not ideal for long ones since it just dumps everything at once.
 
 ![cat](/assets/images/Linux101/NavigatingTheCommandLine/cat.png)
 
+---
+
 ### less
 
 `less` is perfect for browsing long files. It opens the file in a scrollable view—use the `arrow keys` or `Page Up/Down` to navigate. Press `q` to quit and return to the prompt.
 
 ![less](/assets/images/Linux101/NavigatingTheCommandLine/less.png)
+
+---
 
 ### head
 
@@ -140,11 +161,15 @@ You can show more lines with the `-n` flag:
 tail -n 20 file.txt
 ```
 
+---
+
 ### tail
 
 Shows the last 10 lines (by default) of a file—commonly used to check recent log entries or file endings.
 
 ![tail](/assets/images/Linux101/NavigatingTheCommandLine/tail.png)
+
+---
 
 ### Text Editors
 
@@ -155,6 +180,7 @@ nano file.txt
 
 ![nano](/assets/images/Linux101/NavigatingTheCommandLine/nano.png)
 
+---
 
 ## Clearing the Screen and Using Autocomplete
 
@@ -168,6 +194,8 @@ clear
 This command clears the terminal screen, giving you a fresh view without closing the session.
 You can also press `Ctrl + L` as a quick keyboard shortcut to achieve the same thing.
 
+---
+
 ### Autocomplete with Tab
 
 Typing long file or folder names? Just hit the `Tab` key to auto-complete as you type:
@@ -177,6 +205,8 @@ Typing long file or folder names? Just hit the `Tab` key to auto-complete as you
 - If there are multiple matches, press Tab twice to see a list of suggestions.
 
 This saves time and helps avoid typos—especially in long directory paths or file names.
+
+---
 
 ## Useful Directory Commands
 
@@ -189,12 +219,16 @@ mkdir myfolder
 
 Creates a new folder named myfolder in the current directory.
 
+---
+
 ### Remove a Directory
 ```bash
 rmdir myfolder
 ```
 
 Deletes an empty directory. It won’t work if the folder contains files.
+
+---
 
 ### Remove a Directory and Its Contents
 ```bash
@@ -204,12 +238,16 @@ rm -r myfolder
 Deletes a directory and everything inside it—use this carefully!
 The -r flag stands for recursive, meaning it deletes all nested files and folders too.
 
+---
+
 ### Copy a File
 ```bash
 cp file1 file2
 ```
 
 Makes a copy of file1 and names the copy file2.
+
+---
 
 ### Move or Rename a File
 ```bash
@@ -218,6 +256,8 @@ mv file1 newname
 
 Moves file1 to a new location or renames it to newname if no path is specified.
 
+---
+
 ###  Move a File into a Directory
 ```bash
 mv notes.txt ~/Documents/
@@ -225,6 +265,8 @@ mv notes.txt ~/Documents/
 
 Moves notes.txt into your Documents folder.
 If a file with the same name already exists there, it will be overwritten without warning.
+
+---
 
 ## Finding Files and Searching Text – find and grep
 
@@ -244,6 +286,8 @@ find /home/username -name "*.log"
 ```
 
 Finds all .log files inside /home/username.
+
+---
 
 ### Search for Text Inside Files - grep
 
@@ -274,6 +318,8 @@ Exclude Matches with `-v`:
 Shows all lines in `file.txt` that do not contain the word `TEST`.
 Useful when you want to filter out unwanted lines and focus on everything else.
 
+---
+
 ## Getting Unstuck in the Linux Command Line
 
 When working in the Linux terminal, it’s perfectly normal to forget commands or their options. Luckily, most commands come with built-in documentation and handy shortcuts to help you out:
@@ -290,6 +336,8 @@ man ls
 This will show detailed information about the `ls` command, including all options and examples.
 Use the `arrow keys` to scroll, and press `q` to quit the manual.
 
+---
+
 ### Help flag
 
 Most commands support a quick help option that displays a summary of usage and available flags. For example:
@@ -302,12 +350,16 @@ man -h
 
 This flag gives you a brief overview of how to use the `man` command.
 
+---
+
 ## Commands 
 
 - Press the `↑ (up arrow)` to scroll back through previous commands.
 - Press the `↓ (down arrow)` to move forward again.
 
 This is great for repeating or editing previous commands without retyping them. You can even use `Ctrl + R` to search through your command history interactively.
+
+---
 
 ### History
 
@@ -325,6 +377,8 @@ To quickly rerun a command from your history, use the `!` followed by the comman
 ```
 
 This will execute the `ls -l` command again.
+
+---
 
 ### Last Command - !!
 
