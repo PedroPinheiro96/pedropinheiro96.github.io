@@ -169,11 +169,3 @@ It’s a great resource for beginners and pros alike.
 * Never give full (`777`) permissions unless absolutely necessary
 * Scripts should only be executable if needed
 * Use groups to manage shared access between users
-
----
-
-## Summary
-
-Understanding and managing file permissions is critical in Linux. By using `ls -l`, `chmod`, and `chown`, you can control exactly who has access to what — keeping your system secure and under control.
-
-Would you like a downloadable cheat sheet or command-line permissions calculator next?
